@@ -521,6 +521,12 @@ h1, h2, h3, h4, h5, h6 {
   background: url("./icons/transparent-arrow-bottom-left.svg") 100% 0/var(--trainingTypesItemBgIconSize) no-repeat;
 }
 
+.join-us-video {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+}
+
 .join-us-video-wrapper {
   position: relative;
   display: flex;
@@ -599,6 +605,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.65;
   text-transform: uppercase;
   color: var(--color-light);
+  text-align: center;
 }
 
 .join-us-form-input {
@@ -657,6 +664,14 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 30%;
     height: auto;
     margin-block: 0;
+  }
+
+  .join-us-body {
+    padding-bottom: 80px;
+  }
+
+  .join-us-title:not(:last-child) {
+    margin-bottom: 80px;
   }
 }
 
@@ -719,5 +734,23 @@ h1, h2, h3, h4, h5, h6 {
 
   .training-types-image {
     max-width: 120px;
+  }
+
+  .join-us-video-play-button {
+    width: 140px;
+  }
+
+  .join-us-title:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .join-us-form-subtitle {
+    font-size: 16px;
+  }
+
+  .join-us-form-body {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
   }
 }
