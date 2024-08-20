@@ -180,9 +180,14 @@ p:not([class]):not(:last-child) {
 }
 
 .container {
-    max-width: calc(var(--container-width) + (var(--container-padding-x) * 2));
-    margin-inline: auto;
-    padding-inline: var(--container-padding-x);
+  max-width: calc(var(--container-width) + (var(--container-padding-x) * 2));
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.container-wide {
+  max-width: 1920px;
+  margin-inline: auto;
 }
 
 .visually-hidden {
@@ -210,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title-big {
-  font-size: clamp(24px, 3.13vw, 60px);
+  font-size: clamp(24px, 3.12vw, 60px);
 }
 
 .backdrop-title {
@@ -497,8 +502,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .training-types {
   position: relative;
-  max-width: 1920px;
-  margin-inline: auto;
   padding-top: 70px;
   padding-bottom: 120px;
   background-color: var(--color-dark);
@@ -622,6 +625,35 @@ h1, h2, h3, h4, h5, h6 {
   column-gap: 20px;
 }
 
+.location {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.location-map-image {
+  height: auto;
+}
+
+.location-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 15px;
+  text-align: center;
+}
+
+.location-title:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.location-description {
+  max-width: 490px;
+}
+
+.location-description:not(:last-child) {
+  margin-bottom: 37px;
+}
 
 @media (max-width: 1919px) {
   .motivation-card-image {
@@ -676,6 +708,11 @@ h1, h2, h3, h4, h5, h6 {
 
   .join-us-title:not(:last-child) {
     margin-bottom: 80px;
+  }
+
+  .location {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -756,5 +793,13 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
+  }
+
+  .location-body {
+    padding-block: 40px;
+  }
+
+  .location-description:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
